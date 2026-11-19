@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WorldBuilder Demo</title>
+<meta name="description" content="Three 3D scenes, each built by WorldBuilder from a single photo. Open them in your browser or a VR headset.">
+<meta property="og:title" content="WorldBuilder Demo">
+<meta property="og:description" content="One photo of a room in, an editable 3D scene out. Walk around three scenes in your browser or VR headset.">
+<meta property="og:image" content="https://adamrolander.github.io/worldbuilder-demo/assets/living-room-3d.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%232f7482'/><path d='M7 22l9-13 9 13z' fill='white'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#111a1d; --card:#18252a; --ink:#eef3f4; --muted:#9fb0b5; --accent:#5fb4c2; --rule:#2a3a40; }
+  * { box-sizing:border-box; }
+  html, body { margin:0; background:var(--bg); color:var(--ink); }
+  body { font-family:Inter, system-ui, sans-serif; line-height:1.5; }
+  a { color:var(--accent); }
+  .wrap { max-width:1120px; margin:0 auto; padding:56px 24px 40px; }
+  h1 { font-size:clamp(34px, 6vw, 52px); line-height:1.05; letter-spacing:-0.02em; margin:0; font-weight:800; }
+  .tag { font-size:clamp(18px, 2.6vw, 23px); color:var(--accent); font-weight:600; margin:10px 0 0; }
+  .lede { max-width:720px; color:var(--muted); font-size:17px; margin:18px 0 0; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:22px; margin-top:40px; }
+  .card { background:var(--card); border:1px solid var(--rule); border-radius:14px; overflow:hidden; display:flex;
+          flex-direction:column; text-decoration:none; color:inherit; transition:transform .15s, border-color .15s; }
+  .card:hover { transform:translateY(-3px); border-color:var(--accent); }
+  .pair { position:relative; aspect-ratio:16/10; background:#0b1113; }
+  .pair img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:opacity .35s; }
+  .pair .photo { opacity:0; }
+  .card:hover .pair .photo, .card:focus-visible .pair .photo { opacity:1; }
+  .badge { position:absolute; left:10px; top:10px; background:rgba(0,0,0,.65); padding:3px 9px; border-radius:6px;
+           font-size:12px; font-weight:600; }
+  .badge .p { display:none; }
+  .card:hover .badge .p { display:inline; } .card:hover .badge .s { display:none; }
+  .body { padding:16px 18px 18px; display:flex; flex-direction:column; gap:6px; flex:1; }
+  .body h2 { margin:0; font-size:20px; }
+  .meta { color:var(--muted); font-size:14px; }
+  .open { margin-top:auto; padding-top:10px; font-weight:600; color:var(--accent); }
+  .notes { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:22px; margin-top:44px;
+           border-top:1px solid var(--rule); padding-top:30px; }
+  .notes h3 { font-size:15px; margin:0 0 6px; text-transform:uppercase; letter-spacing:.06em; color:var(--accent); }
+  .notes p { margin:0; color:var(--muted); font-size:15px; }
+  .links { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+  .btn { display:inline-block; padding:11px 18px; border-radius:9px; border:1px solid var(--rule); text-decoration:none;
+         color:var(--ink); font-weight:600; background:var(--card); }
+  .btn.primary { background:var(--accent); color:#0b1a1e; border-color:var(--accent); }
+  footer { color:#71848a; font-size:13px; margin-top:44px; }
+  @media (hover:none) { .badge .p { display:none !important; } .badge .s { display:inline !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>WorldBuilder</h1>
+  <p class="tag">One photo of a room in, an editable 3D scene out.</p>
+  <p class="lede">Each scene below was built by WorldBuilder from a single ordinary photo. Every piece of furniture
+    is its own object. Open one to look around, hide objects, or compare it with the original photo
+    in the corner.</p>
+
+  <div class="grid">
+    <a class="card" href="living-room/">
+      <div class="pair">
+        <img src="assets/living-room-3d.jpg" alt="The living room scene in 3D">
+        <img class="photo" src="assets/living-room-photo.jpg" alt="The original living room photo">
+        <span class="badge"><span class="s">3D scene</span><span class="p">Original photo</span></span>
+      </div>
+      <div class="body"><h2>Living Room</h2><div class="meta">37 objects · 23 MB</div><div class="open">Open in 3D &rarr;</div></div>
+    </a>
+    <a class="card" href="library/">
+      <div class="pair">
+        <img src="assets/library-3d.jpg" alt="The library scene in 3D">
+        <img class="photo" src="assets/library-photo.jpg" alt="The original library photo">
+        <span class="badge"><span class="s">3D scene</span><span class="p">Original photo</span></span>
+      </div>
+      <div class="body"><h2>Library</h2><div class="meta">58 objects · 36 MB</div><div class="open">Open in 3D &rarr;</div></div>
+    </a>
+    <a class="card" href="dining-room/">
+      <div class="pair">
+        <img src="assets/dining-room-3d.jpg" alt="The dining room scene in 3D">
+        <img class="photo" src="assets/dining-room-photo.jpg" alt="The original dining room photo">
+        <span class="badge"><span class="s">3D scene</span><span class="p">Original photo</span></span>
+      </div>
+      <div class="body"><h2>Dining Room</h2><div class="meta">37 objects · 25 MB</div><div class="open">Open in 3D &rarr;</div></div>
+    </a>
+  </div>
+
+  <div class="notes">
+    <div><h3>On a Computer</h3><p>Drag to orbit, scroll to zoom, right-drag to pan. Click an object to select it,
+      and use the list on the left to hide objects or the room.</p></div>
+    <div><h3>On a Phone</h3><p>Drag with one finger to orbit and pinch to zoom. Tap <b>Objects</b> for the list.
+      Each scene is 20 to 40 MB, so Wi-Fi helps.</p></div>
+    <div><h3>In a VR Headset</h3><p>Open this page in the Meta Quest browser, pick a scene and press <b>Enter VR</b>.
+      Left stick moves, right stick turns.</p></div>
+  </div>
+
+  <div class="links">
+    <a class="btn primary" href="https://github.com/AdamRolander/WorldBuilder">Get the Code on GitHub</a>
+    <a class="btn" href="https://www.youtube.com/@WorldBuilder-Code">Watch the Videos</a>
+  </div>
+
+  <footer>
+    WorldBuilder is open source (MIT; the Blender add-on is GPL-3.0) and runs on your own NVIDIA GPU. The scenes here are
+    exactly what it produced, with a few placement fixes made in its viewer. The hidden sides of objects are estimated.<br>
+    Photos from Unsplash: living room by Spacejoy, library by Jonathan Borba, dining room by [photographer].
+  </footer>
+</div>
+</body>
+</html>

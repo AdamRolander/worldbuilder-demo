@@ -1,0 +1,93 @@
+{
+ "version": 1,
+ "objects": {
+  "1": {
+   "translate": [
+    0.0,
+    0.0,
+    0.12340865351917008
+   ],
+   "rotate_deg": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "pivot": [
+    0.05921018868684769,
+    -0.107929527759552,
+    1.4066950678825378
+   ],
+   "hidden": false
+  },
+  "16": {
+   "translate": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotate_deg": [
+    0.0,
+    180.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "pivot": [
+    0.20129897072911263,
+    -0.26570045948028564,
+    1.7191620469093323
+   ],
+   "hidden": false
+  },
+  "41": {
+   "translate": [
+    0.0,
+    0.0,
+    0.14164009269047417
+   ],
+   "rotate_deg": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "pivot": [
+    0.09816358238458633,
+    0.15504666790366173,
+    2.237161159515381
+   ],
+   "hidden": false
+  }
+ },
+ "hidden_nodes": [
+  "room_builtin_00_body",
+  "room_builtin_00_face",
+  "room_builtin_01_body",
+  "room_builtin_01_face",
+  "room_builtin_02_body",
+  "room_builtin_02_face",
+  "room_builtin_03_body",
+  "room_builtin_03_face",
+  "room_builtin_04_body",
+  "room_builtin_04_face",
+  "room_builtin_05_body",
+  "room_builtin_05_face",
+  "room_builtin_06_body",
+  "room_builtin_06_face",
+  "room_relief_00",
+  "room_relief_01",
+  "room_relief_02"
+ ]
+}
