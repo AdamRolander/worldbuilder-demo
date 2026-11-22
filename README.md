@@ -1,6 +1,6 @@
 # WorldBuilder Demo
 
-Three scenes built by [WorldBuilder](https://github.com/AdamRolander/WorldBuilder) from single
+Twelve scenes built by [WorldBuilder](https://github.com/AdamRolander/WorldBuilder) from single
 photos, viewable in a browser or a VR headset with nothing to install.
 
 Live at https://adamrolander.github.io/worldbuilder-demo/

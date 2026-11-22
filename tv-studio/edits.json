@@ -1,0 +1,58 @@
+{
+ "version": 1,
+ "objects": {
+  "62": {
+   "translate": [
+    0,
+    0,
+    0
+   ],
+   "rotate_deg": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "hidden": true,
+   "pivot": [
+    -0.4067765772342682,
+    -0.23285547643899918,
+    1.4499936699867249
+   ]
+  },
+  "70": {
+   "translate": [
+    0,
+    0,
+    0
+   ],
+   "rotate_deg": [
+    0,
+    0,
+    0
+   ],
+   "scale": [
+    1,
+    1,
+    1
+   ],
+   "hidden": true,
+   "pivot": [
+    0.10461774095892906,
+    -0.195693239569664,
+    1.9469485878944397
+   ]
+  }
+ },
+ "hidden_nodes": [
+  "room_builtin_01_face",
+  "room_builtin_01_body",
+  "room_relief_01",
+  "room_relief_02",
+  "room_relief_03"
+ ]
+}
